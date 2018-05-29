@@ -16,7 +16,6 @@
 
 
 /* Global variables */
-static bool ___PWM_TimerSelected;
 
 /* Functions */
 
@@ -34,7 +33,6 @@ PWM_RETURN_FLAG PWM_SetUp( uint8_t pwmMask, uint16_t pwmFreq, bool useT2 ){
     else if( period >= __PWM_MAX_TIMER_PERIOD )
         return PWM_RETURN_ERROR_FREQ_SMALLER;
     
-    ___PWM_TimerSelected = useT2;
     // Configure Timer
     if( useT2 ){
         T2CONbits.ON = false;      // stop
