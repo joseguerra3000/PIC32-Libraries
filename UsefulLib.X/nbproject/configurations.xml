@@ -8,6 +8,7 @@
       <itemPath>../useful_lib/adc.h</itemPath>
       <itemPath>../useful_lib.h</itemPath>
       <itemPath>../useful_lib/pwm.h</itemPath>
+      <itemPath>../delay.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -38,8 +39,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>SKDEPIC32PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.44</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>2.05</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -73,8 +74,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../;../../../microchip/harmony/v2_05_01/framework"/>
+        <property key="extra-include-directories" value="../;..\..\..\..\framework"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
