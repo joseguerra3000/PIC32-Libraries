@@ -29,22 +29,22 @@ extern "C" {
 /* CONSTANTS */
 
 const uint8_t 
-        A0  = 0x00, /* Analog Channel 0  */
-        A1  = 0x01, /* Analog Channel 1  */
-        A2  = 0x02, /* Analog Channel 2  */
-        A3  = 0x03, /* Analog Channel 3  */
-        A4  = 0x04, /* Analog Channel 4  */
-        A5  = 0x05, /* Analog Channel 5  */
-        A6  = 0x06, /* Analog Channel 6  */
-        A7  = 0x07, /* Analog Channel 7  */
-        A8  = 0x08, /* Analog Channel 8  */
-        A9  = 0x09, /* Analog Channel 9  */
-        A10 = 0x0A, /* Analog Channel 10 */
-        A11 = 0x0B, /* Analog Channel 11 */
-        A12 = 0x0C, /* Analog Channel 12 */
-        A13 = 0x0D, /* Analog Channel 13 */
-        A14 = 0x0E, /* Analog Channel 14 */
-        A15 = 0x0F; /* Analog Channel 15 */
+        AN0  = 0x00, /* Analog Channel 0 --> CEREBOT JJ-01  */
+        AN1  = 0x01, /* Analog Channel 1 --> CEREBOT JJ-02*/
+        AN2  = 0x02, /* Analog Channel 2 --> CEREBOT JJ-03 */
+        AN3  = 0x03, /* Analog Channel 3 --> CEREBOT JJ-04 */
+        AN4  = 0x04, /* Analog Channel 4 --> CEREBOT JJ-07 */
+        AN5  = 0x05, /* Analog Channel 5 --> CEREBOT JJ-08 */
+        AN6  = 0x06, /* Analog Channel 6 --> CEREBOT Debug Circuit */
+        AN7  = 0x07, /* Analog Channel 7 --> CEREBOT Debug Circuit */
+        AN8  = 0x08, /* Analog Channel 8 --> CEREBOT JJ-09 */
+        AN9  = 0x09, /* Analog Channel 9 --> CEREBOT JJ-10 */
+        AN10 = 0x0A, /* Analog Channel 10 --> CEREBOT JK-01, Shared with LD1 */
+        AN11 = 0x0B, /* Analog Channel 11 --> CEREBOT JK-02, Shared with LD2 */
+        AN12 = 0x0C, /* Analog Channel 12 --> CEREBOT JK-03, Shared with LD3 */
+        AN13 = 0x0D, /* Analog Channel 13 --> CEREBOT JK-04, Shared with LD4 */
+        AN14 = 0x0E, /* Analog Channel 14 --> CEREBOT JB-10 */
+        AN15 = 0x0F; /* Analog Channel 15 --> CEREBOT JB-07 */
     
     
 /* FUNCTIONS */    
