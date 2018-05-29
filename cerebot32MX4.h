@@ -57,7 +57,7 @@ extern "C" {
 
 /*************************** LEDS-OnBoard *************************/
 /* PORT registers */
-#define LEDS_PORT PORTB
+#define LEDS_PORT PORTB 
 #define LEDS_PORTSET PORTBSET
 #define LEDS_PORTCLR PORTBCLR
 #define LEDS_PORTINV PORTBINV
@@ -105,6 +105,14 @@ extern "C" {
 #define BTNS_LATSET LATASET
 #define BTNS_LATCLR LATACLR
 #define BTNS_LATINV LATAINV
+
+/* Channels */
+
+#define LEDS_CHANNEL PORT_CHANNEL_B /* PORT CHANNEL for On-Board LEDS: use with peripherial lib */
+#define LED1_CHANNEL PORT_CHANNEL_B /* PORT CHANNEL for On-Board LED1: use with peripherial lib */
+#define LED2_CHANNEL PORT_CHANNEL_B /* PORT CHANNEL for On-Board LED2: use with peripherial lib */
+#define LED3_CHANNEL PORT_CHANNEL_B /* PORT CHANNEL for On-Board LED3: use with peripherial lib */
+#define LED4_CHANNEL PORT_CHANNEL_B /* PORT CHANNEL for On-Board LED4: use with peripherial lib */
 
 /* BIT MASK */
 #define BTNS_MASK 0xC0
