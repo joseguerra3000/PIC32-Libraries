@@ -33,7 +33,8 @@
 
 /** 
   @Function
-    bool PmodSSD_Attach( uint8_t *A_port, uint8_t A_pin, uint8_t *B_port, uint8_t B_pin, 
+    void PmodSSD_Attach( PmodSSD *ssd,
+                         uint8_t *A_port, uint8_t A_pin, uint8_t *B_port, uint8_t B_pin, 
                          uint8_t *C_port, uint8_t C_pin, uint8_t *D_port, uint8_t D_pin, 
                          uint8_t *E_port, uint8_t E_pin, uint8_t *F_port, uint8_t F_pin, 
                          uint8_t *G_port, uint8_t G_pin, uint8_t *CAT_port, uint8_t CAT_pin 
@@ -46,7 +47,7 @@
   @Remarks
     Refer to the pmod_ssd.h interface header for function usage details.
  */
-bool PmodSSD_Attach( PmodSSD *ssd, 
+void PmodSSD_Attach( PmodSSD *ssd, 
                      port *A_port, uint8_t A_pin, port *B_port, uint8_t B_pin, 
                      port *C_port, uint8_t C_pin, port *D_port, uint8_t D_pin, 
                      port *E_port, uint8_t E_pin, port *F_port, uint8_t F_pin, 
