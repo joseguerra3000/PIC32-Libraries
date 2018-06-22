@@ -24,16 +24,5 @@
 #include "useful_lib/adc.h"
 #include "useful_lib/pwm.h"
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
-
-
-
-#ifdef	__cplusplus
-}
-#endif
-
 #endif	/* _USEFUL_LIB_H */
 
