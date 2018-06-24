@@ -33,22 +33,22 @@ extern "C" {
     
 /* ------------------------------------------------------------ */
 /*        inline void delay_ms( uint32_t msec )
-**
-**        Synopsis:
-**          delay_ms( msec );
-** 
-**        Parameters:
-**          uint32_t msec - amount of time [miliseconds]
-**
-**        Return Values:
-**          None
-**
-**        Errors:
-**          None
- * 
-**        Description:
-**          Pauses the program for the amount of time (in miliseconds) 
-**         specified as parameter.	
+
+          @Synopsis
+            delay_ms( msec );
+ 
+          @Parameters
+            uint32_t msec - amount of time [miliseconds]
+
+          @Return Values
+            None
+
+          @Errors
+            None
+ 
+          @Description
+            Pauses the program for the amount of time (in miliseconds) 
+           specified as parameter.	
 */
 inline void delay_ms( uint32_t msec ){
 	uint32_t tWait, tEnd;
@@ -61,22 +61,22 @@ inline void delay_ms( uint32_t msec ){
 
 /* ------------------------------------------------------------ */
 /*        inline void delay_us( uint32_t usec )
-**
-**        Synopsis:
-**          delay_us( usec );
-** 
-**        Parameters:
-**          uint32_t usec - amount of time [microseconds]
-**
-**        Return Values:
-**          None
-**
-**        Errors:
-**          None
- * 
-**        Description:
-**          Pauses the program for the amount of time (in microseconds) 
-**         specified as parameter.	
+
+          @Synopsis
+            delay_us( usec );
+ 
+          @Parameters
+            uint32_t usec - amount of time [microseconds]
+  
+          @Return Values
+            None
+  
+          @Errors
+            None
+   
+          @Description
+            Pauses the program for the amount of time (in microseconds) 
+           specified as parameter.	
 */
 inline void delay_us( uint32_t usec ){
     uint32_t tWait, tEnd;
@@ -88,22 +88,22 @@ inline void delay_us( uint32_t usec ){
 
 /* ------------------------------------------------------------ */
 /*        inline void delay_ticks( uint32_t ticks)
-**
-**        Synopsis:
-**          delay_ticks( ticks );
-** 
-**        Parameters:
-**          uint32_t ticks - amount of Co-processor pulses
-**
-**        Return Values:
-**          None
-**
-**        Errors:
-**          None
- * 
-**        Description:
-**          Pauses the program for the amount of Co-processor pulses 
-**         specified as parameter.	
+
+          @Synopsis
+            delay_ticks( ticks );
+   
+          @Parameters
+            uint32_t ticks - amount of Co-processor pulses
+  
+          @Return Values
+            None
+  
+          @Errors
+            None
+   
+          @Description
+            Pauses the program for the amount of Co-processor pulses 
+           specified as parameter.	
 */
 inline void delay_ticks( uint32_t ticks ){//ticks_max = 2^32 - 1
     uint32_t tEnd = _CP0_GET_COUNT() + ticks;
@@ -113,26 +113,26 @@ inline void delay_ticks( uint32_t ticks ){//ticks_max = 2^32 - 1
 
 /* ------------------------------------------------------------ */
 /*        inline void delay( uint32_t msec )
-**        
- *        Description:
-**          Pauses the program for the amount of time (in miliseconds) 
-**         specified as parameter.	
- *        
- *        Note:
- *         Just like delay_ms function. See delay_ms function for reference
+        
+          @Description
+ 		    Pauses the program for the amount of time (in miliseconds) 
+          specified as parameter.	
+         
+          @Note
+            Just like delay_ms function. See delay_ms function for reference
 */
 inline void delay( uint32_t msec ){ delay_ms( msec ); }
 
 /* ------------------------------------------------------------ */
 /*        inline void delay( uint32_t msec )
-**        
- *        Description:
-**          Pauses the program for the amount of time (in microseconds) 
-**         specified as parameter.	
- *        
- *        Note:
- *         Just like delay_us function. See delay_us function for reference
- */
+        
+          @Description
+            Pauses the program for the amount of time (in microseconds) 
+           specified as parameter.	
+        
+          @Note
+           Just like delay_us function. See delay_us function for reference
+*/
 inline void delayMicroseconds( uint32_t usec ){ delay_us( usec ); }
 
 #ifdef	__cplusplus
