@@ -19,7 +19,7 @@ endif
 endif
 
 # Environment
-MKDIR=gnumkdir -p
+MKDIR=mkdir -p
 RM=rm -f 
 MV=mv 
 CP=cp 
@@ -110,26 +110,26 @@ ${OBJECTDIR}/_ext/1323675381/adc.o: ../useful_lib/adc.c  nbproject/Makefile-${CN
 	@${MKDIR} "${OBJECTDIR}/_ext/1323675381" 
 	@${RM} ${OBJECTDIR}/_ext/1323675381/adc.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1323675381/adc.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/adc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/adc.o.d" -o ${OBJECTDIR}/_ext/1323675381/adc.o ../useful_lib/adc.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/adc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/adc.o.d" -o ${OBJECTDIR}/_ext/1323675381/adc.o ../useful_lib/adc.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/_ext/1323675381/pwm.o: ../useful_lib/pwm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1323675381" 
 	@${RM} ${OBJECTDIR}/_ext/1323675381/pwm.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1323675381/pwm.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/pwm.o.d" -o ${OBJECTDIR}/_ext/1323675381/pwm.o ../useful_lib/pwm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/pwm.o.d" -o ${OBJECTDIR}/_ext/1323675381/pwm.o ../useful_lib/pwm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 else
 ${OBJECTDIR}/_ext/1323675381/adc.o: ../useful_lib/adc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1323675381" 
 	@${RM} ${OBJECTDIR}/_ext/1323675381/adc.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1323675381/adc.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/adc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/adc.o.d" -o ${OBJECTDIR}/_ext/1323675381/adc.o ../useful_lib/adc.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/adc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/adc.o.d" -o ${OBJECTDIR}/_ext/1323675381/adc.o ../useful_lib/adc.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/_ext/1323675381/pwm.o: ../useful_lib/pwm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1323675381" 
 	@${RM} ${OBJECTDIR}/_ext/1323675381/pwm.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1323675381/pwm.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/pwm.o.d" -o ${OBJECTDIR}/_ext/1323675381/pwm.o ../useful_lib/pwm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/pwm.o.d" -o ${OBJECTDIR}/_ext/1323675381/pwm.o ../useful_lib/pwm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 
@@ -167,7 +167,7 @@ endif
 # Enable dependency checking
 .dep.inc: .depcheck-impl
 
-DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})
+DEPFILES=$(shell "${PATH_TO_IDE_BIN}"mplabwildcard ${POSSIBLE_DEPFILES})
 ifneq (${DEPFILES},)
 include ${DEPFILES}
 endif
