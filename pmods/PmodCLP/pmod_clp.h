@@ -17,21 +17,21 @@
 /**Macros**/
 /*Command macros*/
 
-#define CLP_CMD_LcdFcnInit 0x38 //function set command ( 8-bit interface, 2-lines and 5x8 dots )
-#define CLP_CMD_LcdCtrInit 0x08  //display on/off control ( no display, no cursor, no blinking cursor )
-#define CLP_CMD_LcdClear  0x01   //clear display command
-#define CLP_CMD_LcdRetHome 0x02  // Return home command
-#define CLP_CMD_LcdDisplayShift 0x18 //DisplayShift command
-#define CLP_CMD_LcdCursorShift 0x10  //Cursor shift command
-#define CLP_CMD_LcdSetDdramPos	0x80 //set DDRAM position command
-#define CLP_CMD_LcdSetCgramPos	0x40 //set CGRAM position command
+#define CLP_CMD_LcdFcnInit 0x38                 // function set command ( 8-bit interface, 2-lines and 5x8 dots )
+#define CLP_CMD_LcdCtrInit 0x08                 // display on/off control ( no display, no cursor, no blinking cursor )
+#define CLP_CMD_LcdClear  0x01                  // clear display command
+#define CLP_CMD_LcdRetHome 0x02                 // Return home command
+#define CLP_CMD_LcdDisplayShift 0x18            // DisplayShift command
+#define CLP_CMD_LcdCursorShift 0x10             // Cursor shift command
+#define CLP_CMD_LcdSetDdramPos	0x80            // set DDRAM position command
+#define CLP_CMD_LcdSetCgramPos	0x40            // set CGRAM position command
 
-#define CLP_MSK_BusyStatus 0x80 // mask of bit busy
-#define CLP_MSK_ShiftRL    0x04 // shift direction mask
+#define CLP_MSK_BusyStatus 0x80                 // mask of bit busy
+#define CLP_MSK_ShiftRL    0x04                 // shift direction mask
 
-#define CLP_OPT_DisplayOn 0x4   // Set display on option
-#define CLP_OPT_CursorOn  0x2   // Set cursor en  option
-#define CLP_OPT_BlinkOn   0x1   // Set blink on option
+#define CLP_OPT_DisplayOn 0x4                   // Set display on option
+#define CLP_OPT_CursorOn  0x2                   // Set cursor on option
+#define CLP_OPT_BlinkOn   0x1                   // Set blink on option
 
 #define CLP_READ_DATA true
 #define CLP_READ_STATUS false
@@ -100,23 +100,23 @@ typedef struct _pmod_clp{
 /*Private Function*/
 
 
-/* ------------------------------------------------------------ */
-/*        __CLP_ReadByte
-**
-**        Synopsis:
-**          __CLP_ReadByte( typeOfRead );
-**        Parameters:
-**              bool typeOfRead - true for read data and false for read status.
-**
-**        Return Values:
-**                uint8_t - the byte that was read
-**
-**        Errors:
-**
-**        Description:
-**				The function implements a CLP read sequence. 
-**				The function is used to read data or to read status.
-**				
+/*        
+          __CLP_ReadByte
+
+          @Synopsis
+            __CLP_ReadByte( typeOfRead )
+          
+		  @Parameters
+            bool typeOfRead - true for read data and false for read status.
+  
+          @Return
+            uint8_t - the byte that was read
+  
+          @Errors
+  
+          @Description
+		    The function implements a CLP read sequence. 
+			The function is used to read data or to read status.
 */
 inline uint8_t __CLP_ReadByte( PmodCLP *clp ){
     uint8_t i, byteData = 0;
@@ -139,23 +139,23 @@ inline uint8_t __CLP_ReadByte( PmodCLP *clp ){
 
 /* ------------------------------------------------------------ */
 /*        __CLP_WriteByte
-**
-**        Synopsis:
-**          __CLP_WriteByte( cmd_data, byteData )
-**        Parameters:
-**				uint8_t byteData - data to be written to display
-**              bool cmd_data - true for write data and false for write command
-**
-**        Return Values:
-**                void 
-**
-**        Errors:
-**
-**
-**        Description:
-**				The function implements a CLP write sequence. 
-**				The function is used to write data (RS set before calling this function) or to write commands (RS cleared before calling this function).
-**				When writing data it writes in DDRAM or CGRAM according to the last set write position.
+
+          @Synopsis
+            __CLP_WriteByte( cmd_data, byteData )
+          @Parameters
+  		    uint8_t byteData - data to be written to display
+            bool cmd_data - true for write data and false for write command
+  
+          @Return
+            void 
+  
+          @Errors
+            None
+
+          @Description:
+            The function implements a CLP write sequence. 
+            The function is used to write data (RS set before calling this function) or to write commands (RS cleared before calling this function).
+            When writing data it writes in DDRAM or CGRAM according to the last set write position.
 */
 inline void __CLP_WriteByte( PmodCLP* clp, uint8_t byteData ){
     int i;
@@ -182,21 +182,20 @@ inline void __CLP_WriteByte( PmodCLP* clp, uint8_t byteData ){
 
 /* ------------------------------------------------------------ */
 /*        __CLP_ReadStatus
-**
-**        Synopsis:
-**          __CLP_ReadStatus( &my_clp );
-**        Parameters:
-**
-**
-**        Return Values:
-**                uint8_t - the byte that was read.
-**
-**        Errors:
-**
-**        Description:
-**				Reads the status of the CLP. It calls ReadByte( false ) function.
-**
-**
+
+          @Synopsis
+            __CLP_ReadStatus( &my_clp );
+          @Parameters
+  
+  
+          @Return
+            uint8_t - the byte that was read.
+
+          @Errors
+            None
+          @Description:
+  			Reads the status of the CLP. It calls ReadByte( false ) function.
+
 */
 inline uint8_t __CLP_ReadStatus( PmodCLP* clp ){
     uint8_t status;
