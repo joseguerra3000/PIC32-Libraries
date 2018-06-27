@@ -3,3 +3,5 @@
 *.a
 */build/*
 .*
+/nbproject/private/
+/Sensor.X/nbproject/private/
