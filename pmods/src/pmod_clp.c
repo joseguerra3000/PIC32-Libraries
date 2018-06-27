@@ -5,7 +5,7 @@
  * Created on 4 de mayo de 2018, 12:55
  */
 
-#include "pmod_clp.h"
+#include "../pmod_clp.h"
 
 
 void PmodCLP_Attach( PmodCLP *clp, port *bkl_port, uint8_t bkl_pin,

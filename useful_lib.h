@@ -8,8 +8,8 @@
  * Summary:
  *  This file aggregates all my own created headers for make more easy the
  *  work with the CEREBOT32MX4 board. This include:
- *   - adc.h ~ for use ADC module for read analogs inputs
- *   - pwm.h ~ for use de output compare modules for generate pwm's signals 
+ *   - analog.h ~ for use ADC module for read analogs inputs
+ *   - pwm.h    ~ for use de output compare modules for generate pwm's signals 
  * 
  * Remarks:
  *  The directory in which this file resides should be added to the compiler's
@@ -21,7 +21,7 @@
 #define	_USEFUL_LIB_H
 
 /* Includes */
-#include "useful_lib/adc.h"
+#include "useful_lib/analog.h"
 #include "useful_lib/pwm.h"
 
 #endif	/* _USEFUL_LIB_H */

@@ -5,7 +5,7 @@
  * Created on 18 de mayo de 2018, 2:30
  */
 
-#include "adc.h"
+#include "../analog.h"
 #include <peripheral/peripheral.h>
 /*
  * 

@@ -7,7 +7,7 @@
 
 
 /* Include */
-#include "pwm.h"
+#include "../pwm.h"
 #include <stdint.h>
 #include <sys/attribs.h> 
 #include <xc.h>

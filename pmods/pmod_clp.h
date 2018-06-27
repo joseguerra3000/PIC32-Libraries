@@ -8,7 +8,7 @@
 #ifndef _PMOD_CLP_LIB_H
 #define	_PMOD_CLP_LIB_H
 
-#include "../pmod_tools.h"
+#include "pmod_tools.h"
 #include <stdbool.h>
 #include <stdint.h>
 #include <stddef.h>

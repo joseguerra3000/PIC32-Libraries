@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../useful_lib/adc.c ../useful_lib/pwm.c
+SOURCEFILES_QUOTED_IF_SPACED=../useful_lib/src/pwm.c ../useful_lib/src/analog.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1323675381/adc.o ${OBJECTDIR}/_ext/1323675381/pwm.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1323675381/adc.o.d ${OBJECTDIR}/_ext/1323675381/pwm.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/171699936/pwm.o ${OBJECTDIR}/_ext/171699936/analog.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/171699936/pwm.o.d ${OBJECTDIR}/_ext/171699936/analog.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1323675381/adc.o ${OBJECTDIR}/_ext/1323675381/pwm.o
+OBJECTFILES=${OBJECTDIR}/_ext/171699936/pwm.o ${OBJECTDIR}/_ext/171699936/analog.o
 
 # Source Files
-SOURCEFILES=../useful_lib/adc.c ../useful_lib/pwm.c
+SOURCEFILES=../useful_lib/src/pwm.c ../useful_lib/src/analog.c
 
 
 CFLAGS=
@@ -106,30 +106,30 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1323675381/adc.o: ../useful_lib/adc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1323675381" 
-	@${RM} ${OBJECTDIR}/_ext/1323675381/adc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1323675381/adc.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/adc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/adc.o.d" -o ${OBJECTDIR}/_ext/1323675381/adc.o ../useful_lib/adc.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/171699936/pwm.o: ../useful_lib/src/pwm.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/171699936" 
+	@${RM} ${OBJECTDIR}/_ext/171699936/pwm.o.d 
+	@${RM} ${OBJECTDIR}/_ext/171699936/pwm.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/171699936/pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/171699936/pwm.o.d" -o ${OBJECTDIR}/_ext/171699936/pwm.o ../useful_lib/src/pwm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/1323675381/pwm.o: ../useful_lib/pwm.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1323675381" 
-	@${RM} ${OBJECTDIR}/_ext/1323675381/pwm.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1323675381/pwm.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/pwm.o.d" -o ${OBJECTDIR}/_ext/1323675381/pwm.o ../useful_lib/pwm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/171699936/analog.o: ../useful_lib/src/analog.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/171699936" 
+	@${RM} ${OBJECTDIR}/_ext/171699936/analog.o.d 
+	@${RM} ${OBJECTDIR}/_ext/171699936/analog.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/171699936/analog.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/171699936/analog.o.d" -o ${OBJECTDIR}/_ext/171699936/analog.o ../useful_lib/src/analog.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 else
-${OBJECTDIR}/_ext/1323675381/adc.o: ../useful_lib/adc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1323675381" 
-	@${RM} ${OBJECTDIR}/_ext/1323675381/adc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1323675381/adc.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/adc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/adc.o.d" -o ${OBJECTDIR}/_ext/1323675381/adc.o ../useful_lib/adc.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/171699936/pwm.o: ../useful_lib/src/pwm.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/171699936" 
+	@${RM} ${OBJECTDIR}/_ext/171699936/pwm.o.d 
+	@${RM} ${OBJECTDIR}/_ext/171699936/pwm.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/171699936/pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/171699936/pwm.o.d" -o ${OBJECTDIR}/_ext/171699936/pwm.o ../useful_lib/src/pwm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/1323675381/pwm.o: ../useful_lib/pwm.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1323675381" 
-	@${RM} ${OBJECTDIR}/_ext/1323675381/pwm.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1323675381/pwm.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1323675381/pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/1323675381/pwm.o.d" -o ${OBJECTDIR}/_ext/1323675381/pwm.o ../useful_lib/pwm.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/171699936/analog.o: ../useful_lib/src/analog.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/171699936" 
+	@${RM} ${OBJECTDIR}/_ext/171699936/analog.o.d 
+	@${RM} ${OBJECTDIR}/_ext/171699936/analog.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/171699936/analog.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/171699936/analog.o.d" -o ${OBJECTDIR}/_ext/171699936/analog.o ../useful_lib/src/analog.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 

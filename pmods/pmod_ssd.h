@@ -23,7 +23,7 @@
 #include <xc.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include "../pmod_tools.h"
+#include "pmod_tools.h"
 
 
 /* Provide C++ Compatibility */

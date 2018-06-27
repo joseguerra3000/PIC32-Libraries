@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../pmods/PmodCLP/pmod_clp.c ../pmods/PmodSSD/pmod_ssd.c
+SOURCEFILES_QUOTED_IF_SPACED=../pmods/src/pmod_clp.c ../pmods/src/pmod_ssd.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1233292520/pmod_clp.o ${OBJECTDIR}/_ext/1233276939/pmod_ssd.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1233292520/pmod_clp.o.d ${OBJECTDIR}/_ext/1233276939/pmod_ssd.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1238089881/pmod_clp.o ${OBJECTDIR}/_ext/1238089881/pmod_ssd.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1238089881/pmod_clp.o.d ${OBJECTDIR}/_ext/1238089881/pmod_ssd.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1233292520/pmod_clp.o ${OBJECTDIR}/_ext/1233276939/pmod_ssd.o
+OBJECTFILES=${OBJECTDIR}/_ext/1238089881/pmod_clp.o ${OBJECTDIR}/_ext/1238089881/pmod_ssd.o
 
 # Source Files
-SOURCEFILES=../pmods/PmodCLP/pmod_clp.c ../pmods/PmodSSD/pmod_ssd.c
+SOURCEFILES=../pmods/src/pmod_clp.c ../pmods/src/pmod_ssd.c
 
 
 CFLAGS=
@@ -106,30 +106,30 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1233292520/pmod_clp.o: ../pmods/PmodCLP/pmod_clp.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1233292520" 
-	@${RM} ${OBJECTDIR}/_ext/1233292520/pmod_clp.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1233292520/pmod_clp.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1233292520/pmod_clp.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -MMD -MF "${OBJECTDIR}/_ext/1233292520/pmod_clp.o.d" -o ${OBJECTDIR}/_ext/1233292520/pmod_clp.o ../pmods/PmodCLP/pmod_clp.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1238089881/pmod_clp.o: ../pmods/src/pmod_clp.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1238089881" 
+	@${RM} ${OBJECTDIR}/_ext/1238089881/pmod_clp.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1238089881/pmod_clp.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1238089881/pmod_clp.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -MMD -MF "${OBJECTDIR}/_ext/1238089881/pmod_clp.o.d" -o ${OBJECTDIR}/_ext/1238089881/pmod_clp.o ../pmods/src/pmod_clp.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/1233276939/pmod_ssd.o: ../pmods/PmodSSD/pmod_ssd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1233276939" 
-	@${RM} ${OBJECTDIR}/_ext/1233276939/pmod_ssd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1233276939/pmod_ssd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1233276939/pmod_ssd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -MMD -MF "${OBJECTDIR}/_ext/1233276939/pmod_ssd.o.d" -o ${OBJECTDIR}/_ext/1233276939/pmod_ssd.o ../pmods/PmodSSD/pmod_ssd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1238089881/pmod_ssd.o: ../pmods/src/pmod_ssd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1238089881" 
+	@${RM} ${OBJECTDIR}/_ext/1238089881/pmod_ssd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1238089881/pmod_ssd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1238089881/pmod_ssd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -MMD -MF "${OBJECTDIR}/_ext/1238089881/pmod_ssd.o.d" -o ${OBJECTDIR}/_ext/1238089881/pmod_ssd.o ../pmods/src/pmod_ssd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 else
-${OBJECTDIR}/_ext/1233292520/pmod_clp.o: ../pmods/PmodCLP/pmod_clp.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1233292520" 
-	@${RM} ${OBJECTDIR}/_ext/1233292520/pmod_clp.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1233292520/pmod_clp.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1233292520/pmod_clp.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -MMD -MF "${OBJECTDIR}/_ext/1233292520/pmod_clp.o.d" -o ${OBJECTDIR}/_ext/1233292520/pmod_clp.o ../pmods/PmodCLP/pmod_clp.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1238089881/pmod_clp.o: ../pmods/src/pmod_clp.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1238089881" 
+	@${RM} ${OBJECTDIR}/_ext/1238089881/pmod_clp.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1238089881/pmod_clp.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1238089881/pmod_clp.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -MMD -MF "${OBJECTDIR}/_ext/1238089881/pmod_clp.o.d" -o ${OBJECTDIR}/_ext/1238089881/pmod_clp.o ../pmods/src/pmod_clp.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/1233276939/pmod_ssd.o: ../pmods/PmodSSD/pmod_ssd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1233276939" 
-	@${RM} ${OBJECTDIR}/_ext/1233276939/pmod_ssd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1233276939/pmod_ssd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1233276939/pmod_ssd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -MMD -MF "${OBJECTDIR}/_ext/1233276939/pmod_ssd.o.d" -o ${OBJECTDIR}/_ext/1233276939/pmod_ssd.o ../pmods/PmodSSD/pmod_ssd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1238089881/pmod_ssd.o: ../pmods/src/pmod_ssd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1238089881" 
+	@${RM} ${OBJECTDIR}/_ext/1238089881/pmod_ssd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1238089881/pmod_ssd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1238089881/pmod_ssd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -MMD -MF "${OBJECTDIR}/_ext/1238089881/pmod_ssd.o.d" -o ${OBJECTDIR}/_ext/1238089881/pmod_ssd.o ../pmods/src/pmod_ssd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 
