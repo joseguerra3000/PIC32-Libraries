@@ -1,19 +1,15 @@
-/* ************************************************************************** */
-/** Descriptive File Name
-
-  @Company
-    Company Name
-
-  @File Name
-    filename.h
-
-  @Summary
-    Brief description of the file.
-
-  @Description
-    Describe the purpose of this file.
+/* 
+ * File:   AD22103.h
+ * Author: Jose Guerra Carmenate
+ *
+ * Created on 28 de junio de 2018
+ * 
+ * 
+ * 
+ * Summary:
+ *  This file have the definition, constants and functions for use
+ *  the AD22103 Temperature Sensor with a low level of complexity.
  */
-/* ************************************************************************** */
 
 #ifndef _AD22103_H    /* Guard against multiple inclusion */
 #define _AD22103_H
@@ -24,6 +20,11 @@
 /* Section: Included Files                                                    */
 /* ************************************************************************** */
 /* ************************************************************************** */
+#include <xc.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include "../useful_lib/analog.h"
+#include "temperature-common.h"
 
 /* Provide C++ Compatibility */
 #ifdef __cplusplus
@@ -37,29 +38,6 @@ extern "C" {
     /* ************************************************************************** */
     /* ************************************************************************** */
 
-    /*  A brief description of a section can be given directly below the section
-        banner.
-     */
-
-
-    /* ************************************************************************** */
-    /** Descriptive Constant Name
-
-      @Summary
-        Brief one-line summary of the constant.
-    
-      @Description
-        Full description, explaining the purpose and usage of the constant.
-        <p>
-        Additional description in consecutive paragraphs separated by HTML 
-        paragraph breaks, as necessary.
-        <p>
-        Type "JavaDoc" in the "How Do I?" IDE toolbar for more information on tags.
-    
-      @Remarks
-        Any additional remarks
-     */
-#define EXAMPLE_CONSTANT 0
 
 
     // *****************************************************************************
@@ -67,99 +45,93 @@ extern "C" {
     // Section: Data Types
     // *****************************************************************************
     // *****************************************************************************
-
-    /*  A brief description of a section can be given directly below the section
-        banner.
-     */
-
-
-    // *****************************************************************************
-
-    /** Descriptive Data Type Name
-
-      @Summary
-        Brief one-line summary of the data type.
     
-      @Description
-        Full description, explaining the purpose and usage of the data type.
-        <p>
-        Additional description in consecutive paragraphs separated by HTML 
-        paragraph breaks, as necessary.
-        <p>
-        Type "JavaDoc" in the "How Do I?" IDE toolbar for more information on tags.
-
-      @Remarks
-        Any additional remarks
-        <p>
-        Describe enumeration elements and structure and union members above each 
-        element or member.
-     */
-    typedef struct _example_struct_t {
-        /* Describe structure member. */
-        int some_number;
-
-        /* Describe structure member. */
-        bool some_flag;
-
-    } example_struct_t;
-
-
+ 
+    typedef enum{
+        AD22103_RETURN_CODE_SUCCESSFUL,             // Attached successful
+        AD22103_RETURN_CODE_ANALOG_CHANNEL_INVALID, // Analog channel invalid
+        AD22103_RETURN_CODE_VS_SMALL,               // VS is invalid (less that 2.7V)
+        AD22103_RETURN_CODE_VS_BIG                  // Vs is invalid (more that 3.6V)
+        
+    } AD22103_RETURN_CODE;
+    
+    
+    // AD22103 Sensor class
+    typedef struct {
+        uint8_t analogChannel; // Analog channel for voltage read
+        float vs;              // Voltage Suply attached to the sensor
+    } AD22103Sensor;
+    
     // *****************************************************************************
     // *****************************************************************************
     // Section: Interface Functions
     // *****************************************************************************
     // *****************************************************************************
-
-    /*  A brief description of a section can be given directly below the section
-        banner.
-     */
-
-    // *****************************************************************************
-    /**
-      @Function
-        int ExampleFunctionName ( int param1, int param2 ) 
-
-      @Summary
-        Brief one-line description of the function.
-
-      @Description
-        Full description, explaining the purpose and usage of the function.
-        <p>
-        Additional description in consecutive paragraphs separated by HTML 
-        paragraph breaks, as necessary.
-        <p>
-        Type "JavaDoc" in the "How Do I?" IDE toolbar for more information on tags.
-
-      @Precondition
-        List and describe any required preconditions. If there are no preconditions,
-        enter "None."
-
-      @Parameters
-        @param param1 Describe the first parameter to the function.
     
-        @param param2 Describe the second parameter to the function.
+/* ------------------------------------------------------------ */
+/*        AD22103_RETURN_CODE AD22103_Attach( AD22103Sensor sensor, uint8_t analogChannel, float Vs )
+* 
+*         Synopsis:
+*           AD22103_Attach( sensor, analogChannel, Vs );
+*  
+*         Parameters:
+*           AD22103Sensor sensor - AD22103 sensor identifier
+*           uint8_t analogChannel - analog channel to use.
+*           float Vs - Supply source connected on AD22103 sensor (Volts)
+* 
+*         Return Values:
+*           AD22103_RETURN_CODE
+*  
+*         Description:
+*           Attach one AD22103 temperature sensor on an specified analogChannel.
+*           This function check that the analog channel and Vs have valids values
+*          and reserve the necesary memory for store the sensors data.
+*           
+*/
+    AD22103_RETURN_CODE AD22103_Attach( AD22103Sensor *sensor, uint8_t analogChannel, float Vs );
+    
+    
+/* ------------------------------------------------------------ */
+/*        inline uint16_t AD22103_GetRawValue( AD22103Sensor sensor )
+* 
+*         Synopsis:
+*           AD22103_GetRawValue( sensor )
+*  
+*         Parameters:
+*           AD22103Sensor sensor - AD22103 sensor identifier
+*           
+*         Return Values:
+*           uint16_t - raw value on the analog input
+*  
+*         Description:
+*           Return the raw value on the analog input.
+*           
+*/
+    inline uint16_t AD22103_GetRawValue( AD22103Sensor *sensor ){
+        return analogRead( sensor->analogChannel );
+    }
+    
+    
+/* ------------------------------------------------------------ */
+/*        float AD22103_GetTemperature( AD22103Sensor sensor, SENSOR_TEMPERATURE_UNIT unit )
+* 
+*         Synopsis:
+*           AD22103_GetTemperature( sensor, unit );
+*  
+*         Parameters:
+*           AD22103Sensor sensor - AD22103 sensor identifier
+*           SENSOR_TEMPERATURE_UNIT unit - define the unit of returned value
 
-      @Returns
-        List (if feasible) and describe the return values of the function.
-        <ul>
-          <li>1   Indicates an error occurred
-          <li>0   Indicates an error did not occur
-        </ul>
-
-      @Remarks
-        Describe any special behavior not described above.
-        <p>
-        Any additional remarks.
-
-      @Example
-        @code
-        if(ExampleFunctionName(1, 2) == 0)
-        {
-            return 3;
-        }
-     */
-    int ExampleFunction(int param1, int param2);
-
+*           
+*         Return Values:
+*           float - Temperature on the selected unit
+*  
+*         Description:
+*           Return the temperature on the selected unit.
+*           
+*/
+    float AD22103_GetTemperature( AD22103Sensor *sensor, SENSOR_TEMPERATURE_UNIT unit );
+    
 
     /* Provide C++ Compatibility */
 #ifdef __cplusplus

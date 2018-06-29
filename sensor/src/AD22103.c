@@ -1,19 +1,15 @@
-/* ************************************************************************** */
-/** Descriptive File Name
-
-  @Company
-    Company Name
-
-  @File Name
-    filename.c
-
-  @Summary
-    Brief description of the file.
-
-  @Description
-    Describe the purpose of this file.
+/* 
+ * File:   AD22103.c
+ * Author: Jose Guerra Carmenate
+ *
+ * Created on 28 de junio de 2018
+ * 
+ * 
+ * 
+ * Summary:
+ *  This file have the functions implementation for use
+ *  the AD22103 Temperature Sensor with a low level of complexity.
  */
-/* ************************************************************************** */
 
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -28,88 +24,12 @@
 /* ************************************************************************** */
 /* ************************************************************************** */
 
-/*  A brief description of a section can be given directly below the section
-    banner.
- */
-
-/* ************************************************************************** */
-/** Descriptive Data Item Name
-
-  @Summary
-    Brief one-line summary of the data item.
-    
-  @Description
-    Full description, explaining the purpose and usage of data item.
-    <p>
-    Additional description in consecutive paragraphs separated by HTML 
-    paragraph breaks, as necessary.
-    <p>
-    Type "JavaDoc" in the "How Do I?" IDE toolbar for more information on tags.
-    
-  @Remarks
-    Any additional remarks
- */
-int global_data;
-
 
 /* ************************************************************************** */
 /* ************************************************************************** */
 // Section: Local Functions                                                   */
 /* ************************************************************************** */
 /* ************************************************************************** */
-
-/*  A brief description of a section can be given directly below the section
-    banner.
- */
-
-/* ************************************************************************** */
-
-/** 
-  @Function
-    int ExampleLocalFunctionName ( int param1, int param2 ) 
-
-  @Summary
-    Brief one-line description of the function.
-
-  @Description
-    Full description, explaining the purpose and usage of the function.
-    <p>
-    Additional description in consecutive paragraphs separated by HTML 
-    paragraph breaks, as necessary.
-    <p>
-    Type "JavaDoc" in the "How Do I?" IDE toolbar for more information on tags.
-
-  @Precondition
-    List and describe any required preconditions. If there are no preconditions,
-    enter "None."
-
-  @Parameters
-    @param param1 Describe the first parameter to the function.
-    
-    @param param2 Describe the second parameter to the function.
-
-  @Returns
-    List (if feasible) and describe the return values of the function.
-    <ul>
-      <li>1   Indicates an error occurred
-      <li>0   Indicates an error did not occur
-    </ul>
-
-  @Remarks
-    Describe any special behavior not described above.
-    <p>
-    Any additional remarks.
-
-  @Example
-    @code
-    if(ExampleFunctionName(1, 2) == 0)
-    {
-        return 3;
-    }
- */
-static int ExampleLocalFunction(int param1, int param2) {
-    return 0;
-}
 
 
 /* ************************************************************************** */
@@ -118,26 +38,77 @@ static int ExampleLocalFunction(int param1, int param2) {
 /* ************************************************************************** */
 /* ************************************************************************** */
 
-/*  A brief description of a section can be given directly below the section
-    banner.
- */
 
-// *****************************************************************************
+/* ------------------------------------------------------------ */
+/*        AD22103_RETURN_CODE AD22103_Attach( AD22103Sensor sensor, uint8_t analogChannel, float Vs )
+* 
+*         Synopsis:
+*           AD22103_Attach( sensor, analogChannel, Vs );
+*  
+*         Parameters:
+*           AD22103Sensor sensor - AD22103 sensor identifier
+*           uint8_t analogChannel - analog channel to use.
+*           float Vs - Supply source connected on AD22103 sensor ( Volts )
+* 
+*         Return Values:
+*           AD22103_RETURN_CODE
+*  
+*         Description:
+*           Attach one AD22103 temperature sensor on an specified analogChannel.
+*           This function check that the analog channel and Vs have valids values
+*          and reserve the necesary memory for store the sensors data.
+*           
+*/
+AD22103_RETURN_CODE AD22103_Attach( AD22103Sensor *sensor, uint8_t _analogChannel, float _Vs ){
+    if( _analogChannel > 15 )
+        return AD22103_RETURN_CODE_ANALOG_CHANNEL_INVALID;
+    
+    if( _Vs < 2.7 )
+        return AD22103_RETURN_CODE_VS_SMALL; 
+    if( _Vs > 3.6 )
+        return AD22103_RETURN_CODE_VS_BIG;
+    
+    sensor->analogChannel = _analogChannel;
+    
+    sensor->vs = _Vs*1000;
+    
+    return AD22103_RETURN_CODE_SUCCESSFUL;
+ }
 
-/** 
-  @Function
-    int ExampleInterfaceFunctionName ( int param1, int param2 ) 
 
-  @Summary
-    Brief one-line description of the function.
 
-  @Remarks
-    Refer to the example_file.h interface header for function usage details.
- */
-int ExampleInterfaceFunction(int param1, int param2) {
-    return 0;
+/* ------------------------------------------------------------ */
+/*        float AD22103_GetTemperature( AD22103Sensor sensor, SENSOR_TEMPERATURE_UNIT unit )
+* 
+*         Synopsis:
+*           AD22103_GetTemperature( sensor, unit );
+*  
+*         Parameters:
+*           AD22103Sensor sensor - AD22103 sensor identifier
+*           SENSOR_TEMPERATURE_UNIT unit - define the unit of returned value
+
+*           
+*         Return Values:
+*           float - Temperature on the selected unit
+*  
+*         Description:
+*           Return the temperature on the selected unit.
+*           
+*/
+float AD22103_GetTemperature( AD22103Sensor *sensor, SENSOR_TEMPERATURE_UNIT unit ){
+    uint32_t raw = analogRead( sensor->analogChannel );
+    float Ta;
+    //Ta = raw*3300*3300/(1024*28*sensor->vs);
+    Ta = (raw*3300/(sensor->vs))*3300/(1024*28) - 10.0;
+    
+    if( unit == SENSOR_TEMPERATURE_UNIT_FAHRENHEIT )
+        Ta = TEMPERATURE_ConvertCelsiusToFahrenheit( Ta );
+    else if( unit == SENSOR_TEMPERATURE_UNIT_KELVIN )
+        Ta = TEMPERATURE_ConvertCelsiusToKelvin( Ta );
+    
+    return Ta;
 }
-
+    
 
 /* *****************************************************************************
  End of File
