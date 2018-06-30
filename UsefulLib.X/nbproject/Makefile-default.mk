@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../useful_lib/src/pwm.c ../useful_lib/src/analog.c ../useful_lib/src/spi.c
+SOURCEFILES_QUOTED_IF_SPACED=../useful_lib/src/pwm.c ../useful_lib/src/analog.c ../useful_lib/src/spi.c ../useful_lib/src/serial.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/171699936/pwm.o ${OBJECTDIR}/_ext/171699936/analog.o ${OBJECTDIR}/_ext/171699936/spi.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/171699936/pwm.o.d ${OBJECTDIR}/_ext/171699936/analog.o.d ${OBJECTDIR}/_ext/171699936/spi.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/171699936/pwm.o ${OBJECTDIR}/_ext/171699936/analog.o ${OBJECTDIR}/_ext/171699936/spi.o ${OBJECTDIR}/_ext/171699936/serial.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/171699936/pwm.o.d ${OBJECTDIR}/_ext/171699936/analog.o.d ${OBJECTDIR}/_ext/171699936/spi.o.d ${OBJECTDIR}/_ext/171699936/serial.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/171699936/pwm.o ${OBJECTDIR}/_ext/171699936/analog.o ${OBJECTDIR}/_ext/171699936/spi.o
+OBJECTFILES=${OBJECTDIR}/_ext/171699936/pwm.o ${OBJECTDIR}/_ext/171699936/analog.o ${OBJECTDIR}/_ext/171699936/spi.o ${OBJECTDIR}/_ext/171699936/serial.o
 
 # Source Files
-SOURCEFILES=../useful_lib/src/pwm.c ../useful_lib/src/analog.c ../useful_lib/src/spi.c
+SOURCEFILES=../useful_lib/src/pwm.c ../useful_lib/src/analog.c ../useful_lib/src/spi.c ../useful_lib/src/serial.c
 
 
 CFLAGS=
@@ -124,6 +124,12 @@ ${OBJECTDIR}/_ext/171699936/spi.o: ../useful_lib/src/spi.c  nbproject/Makefile-$
 	@${RM} ${OBJECTDIR}/_ext/171699936/spi.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/171699936/spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/171699936/spi.o.d" -o ${OBJECTDIR}/_ext/171699936/spi.o ../useful_lib/src/spi.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/_ext/171699936/serial.o: ../useful_lib/src/serial.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/171699936" 
+	@${RM} ${OBJECTDIR}/_ext/171699936/serial.o.d 
+	@${RM} ${OBJECTDIR}/_ext/171699936/serial.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/171699936/serial.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/171699936/serial.o.d" -o ${OBJECTDIR}/_ext/171699936/serial.o ../useful_lib/src/serial.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
 else
 ${OBJECTDIR}/_ext/171699936/pwm.o: ../useful_lib/src/pwm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/171699936" 
@@ -142,6 +148,12 @@ ${OBJECTDIR}/_ext/171699936/spi.o: ../useful_lib/src/spi.c  nbproject/Makefile-$
 	@${RM} ${OBJECTDIR}/_ext/171699936/spi.o.d 
 	@${RM} ${OBJECTDIR}/_ext/171699936/spi.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/171699936/spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/171699936/spi.o.d" -o ${OBJECTDIR}/_ext/171699936/spi.o ../useful_lib/src/spi.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/171699936/serial.o: ../useful_lib/src/serial.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/171699936" 
+	@${RM} ${OBJECTDIR}/_ext/171699936/serial.o.d 
+	@${RM} ${OBJECTDIR}/_ext/171699936/serial.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/171699936/serial.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -I"../../../../framework" -I"../../../../framework" -MMD -MF "${OBJECTDIR}/_ext/171699936/serial.o.d" -o ${OBJECTDIR}/_ext/171699936/serial.o ../useful_lib/src/serial.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 

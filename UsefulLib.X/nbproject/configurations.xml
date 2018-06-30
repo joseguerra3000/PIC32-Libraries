@@ -10,6 +10,7 @@
       <itemPath>../delay.h</itemPath>
       <itemPath>../useful_lib/analog.h</itemPath>
       <itemPath>../useful_lib/spi.h</itemPath>
+      <itemPath>../useful_lib/serial.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -21,6 +22,7 @@
       <itemPath>../useful_lib/src/pwm.c</itemPath>
       <itemPath>../useful_lib/src/analog.c</itemPath>
       <itemPath>../useful_lib/src/spi.c</itemPath>
+      <itemPath>../useful_lib/src/serial.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
