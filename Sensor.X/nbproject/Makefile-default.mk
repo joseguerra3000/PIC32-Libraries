@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../sensor/src/AD22103.c
+SOURCEFILES_QUOTED_IF_SPACED=../sensor/src/AD22103.c ../sensor/src/LM35.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/110709314/AD22103.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/110709314/AD22103.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/110709314/AD22103.o ${OBJECTDIR}/_ext/110709314/LM35.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/110709314/AD22103.o.d ${OBJECTDIR}/_ext/110709314/LM35.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/110709314/AD22103.o
+OBJECTFILES=${OBJECTDIR}/_ext/110709314/AD22103.o ${OBJECTDIR}/_ext/110709314/LM35.o
 
 # Source Files
-SOURCEFILES=../sensor/src/AD22103.c
+SOURCEFILES=../sensor/src/AD22103.c ../sensor/src/LM35.c
 
 
 CFLAGS=
@@ -112,12 +112,24 @@ ${OBJECTDIR}/_ext/110709314/AD22103.o: ../sensor/src/AD22103.c  nbproject/Makefi
 	@${RM} ${OBJECTDIR}/_ext/110709314/AD22103.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/110709314/AD22103.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/110709314/AD22103.o.d" -o ${OBJECTDIR}/_ext/110709314/AD22103.o ../sensor/src/AD22103.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/_ext/110709314/LM35.o: ../sensor/src/LM35.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/110709314" 
+	@${RM} ${OBJECTDIR}/_ext/110709314/LM35.o.d 
+	@${RM} ${OBJECTDIR}/_ext/110709314/LM35.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/110709314/LM35.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DSKDEPIC32PlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/110709314/LM35.o.d" -o ${OBJECTDIR}/_ext/110709314/LM35.o ../sensor/src/LM35.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
 else
 ${OBJECTDIR}/_ext/110709314/AD22103.o: ../sensor/src/AD22103.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/110709314" 
 	@${RM} ${OBJECTDIR}/_ext/110709314/AD22103.o.d 
 	@${RM} ${OBJECTDIR}/_ext/110709314/AD22103.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/110709314/AD22103.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/110709314/AD22103.o.d" -o ${OBJECTDIR}/_ext/110709314/AD22103.o ../sensor/src/AD22103.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/110709314/LM35.o: ../sensor/src/LM35.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/110709314" 
+	@${RM} ${OBJECTDIR}/_ext/110709314/LM35.o.d 
+	@${RM} ${OBJECTDIR}/_ext/110709314/LM35.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/110709314/LM35.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/110709314/LM35.o.d" -o ${OBJECTDIR}/_ext/110709314/LM35.o ../sensor/src/LM35.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 
