@@ -23,6 +23,7 @@
 /* Includes */
 #include "useful_lib/analog.h"
 #include "useful_lib/pwm.h"
+#include "useful_lib/spi.h"
 
 #endif	/* _USEFUL_LIB_H */
 

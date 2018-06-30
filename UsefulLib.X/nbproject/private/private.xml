@@ -7,5 +7,10 @@
             <file>file:/media/jose/C86671166671070A/microchip/harmony/v2_05_01/apps/MyProjects/PIC32-Libraries/delay.h</file>
             <file>file:/media/jose/C86671166671070A/microchip/harmony/v2_05_01/apps/MyProjects/PIC32-Libraries/pmods/pmod_clp.h</file>
         </group>
+        <group name="PIC32-Libraries">
+            <file>file:/media/jose/C86671166671070A/microchip/harmony/v2_05_01/apps/MyProjects/PIC32-Libraries/useful_lib.h</file>
+            <file>file:/media/jose/C86671166671070A/microchip/harmony/v2_05_01/apps/MyProjects/PIC32-Libraries/useful_lib/spi.h</file>
+            <file>file:/media/jose/C86671166671070A/microchip/harmony/v2_05_01/apps/MyProjects/PIC32-Libraries/useful_lib/src/spi.c</file>
+        </group>
     </open-files>
 </project-private>

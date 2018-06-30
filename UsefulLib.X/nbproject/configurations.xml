@@ -9,6 +9,7 @@
       <itemPath>../useful_lib/pwm.h</itemPath>
       <itemPath>../delay.h</itemPath>
       <itemPath>../useful_lib/analog.h</itemPath>
+      <itemPath>../useful_lib/spi.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -19,6 +20,7 @@
                    projectFiles="true">
       <itemPath>../useful_lib/src/pwm.c</itemPath>
       <itemPath>../useful_lib/src/analog.c</itemPath>
+      <itemPath>../useful_lib/src/spi.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
